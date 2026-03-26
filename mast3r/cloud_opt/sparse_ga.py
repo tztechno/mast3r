@@ -729,7 +729,9 @@ def prepare_canonical_data(imgs, tmp_pairs, subsample, order_imgs=False, min_con
                 ptmaps11[n] = X
                 confs11[n] = C
                 n += 1
-
+                
+        confs11 = None
+        ptmaps11 = None
         if canon is None:
             canon, canon2, cconf = canonical_view(ptmaps11, confs11, subsample, **kw)
             del ptmaps11
